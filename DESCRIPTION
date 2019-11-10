@@ -1,11 +1,11 @@
 Package: MDD
 Type: Package
-Title: What the package does (short line)
-Version: 1.0
+Title: Conditional Mean Independence Testing via Martingale Difference Divergence
+Version: 0.0.0.9000
 Date: 2019-11-10
-Author: Who wrote it
-Maintainer: Who to complain to <yourfault@somewhere.net>
-Description: More about what it does (maybe more than one line)
-License: What license is it under?
+Author: Jian (Jeff) Yan
+Maintainer: Jian (Jeff) Yan <jian@stat.tamu.edu>
+Description: Conditional mean independence tests based on martingale difference divergence and martingale difference correlation, where variables can be either vectored-valued or function-valued. 
+License: GPL-3
 Imports: Rcpp (>= 1.0.2)
 LinkingTo: Rcpp, RcppArmadillo
