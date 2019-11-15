@@ -9,3 +9,4 @@ Description: Conditional mean independence tests based on martingale difference 
 License: GPL-3
 Imports: Rcpp (>= 1.0.2)
 LinkingTo: Rcpp, RcppArmadillo
+RoxygenNote: 7.0.0
