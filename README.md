@@ -1,7 +1,1 @@
-# MDD
-
-## Installation
-
-```r
-devtools::install_github("jeffjyan/MDD")
-```
+# MDD: Conditional Mean Independence Testing via Martingale Difference Divergence
