@@ -6,55 +6,36 @@
 
 using namespace Rcpp;
 
-// rcpparma_hello_world
-arma::mat rcpparma_hello_world();
-RcppExport SEXP _MDD_rcpparma_hello_world() {
+// mdd_test_perm_c
+Rcpp::List mdd_test_perm_c(const arma::mat& X, const arma::mat& Y, int R);
+RcppExport SEXP _MDD_mdd_test_perm_c(SEXP XSEXP, SEXP YSEXP, SEXP RSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
-    rcpp_result_gen = Rcpp::wrap(rcpparma_hello_world());
+    Rcpp::traits::input_parameter< const arma::mat& >::type X(XSEXP);
+    Rcpp::traits::input_parameter< const arma::mat& >::type Y(YSEXP);
+    Rcpp::traits::input_parameter< int >::type R(RSEXP);
+    rcpp_result_gen = Rcpp::wrap(mdd_test_perm_c(X, Y, R));
     return rcpp_result_gen;
 END_RCPP
 }
-// rcpparma_outerproduct
-arma::mat rcpparma_outerproduct(const arma::colvec& x);
-RcppExport SEXP _MDD_rcpparma_outerproduct(SEXP xSEXP) {
+// mdd_test_boot_c
+Rcpp::List mdd_test_boot_c(const arma::mat& X, const arma::mat& Y, int B);
+RcppExport SEXP _MDD_mdd_test_boot_c(SEXP XSEXP, SEXP YSEXP, SEXP BSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
-    Rcpp::traits::input_parameter< const arma::colvec& >::type x(xSEXP);
-    rcpp_result_gen = Rcpp::wrap(rcpparma_outerproduct(x));
-    return rcpp_result_gen;
-END_RCPP
-}
-// rcpparma_innerproduct
-double rcpparma_innerproduct(const arma::colvec& x);
-RcppExport SEXP _MDD_rcpparma_innerproduct(SEXP xSEXP) {
-BEGIN_RCPP
-    Rcpp::RObject rcpp_result_gen;
-    Rcpp::RNGScope rcpp_rngScope_gen;
-    Rcpp::traits::input_parameter< const arma::colvec& >::type x(xSEXP);
-    rcpp_result_gen = Rcpp::wrap(rcpparma_innerproduct(x));
-    return rcpp_result_gen;
-END_RCPP
-}
-// rcpparma_bothproducts
-Rcpp::List rcpparma_bothproducts(const arma::colvec& x);
-RcppExport SEXP _MDD_rcpparma_bothproducts(SEXP xSEXP) {
-BEGIN_RCPP
-    Rcpp::RObject rcpp_result_gen;
-    Rcpp::RNGScope rcpp_rngScope_gen;
-    Rcpp::traits::input_parameter< const arma::colvec& >::type x(xSEXP);
-    rcpp_result_gen = Rcpp::wrap(rcpparma_bothproducts(x));
+    Rcpp::traits::input_parameter< const arma::mat& >::type X(XSEXP);
+    Rcpp::traits::input_parameter< const arma::mat& >::type Y(YSEXP);
+    Rcpp::traits::input_parameter< int >::type B(BSEXP);
+    rcpp_result_gen = Rcpp::wrap(mdd_test_boot_c(X, Y, B));
     return rcpp_result_gen;
 END_RCPP
 }
 
 static const R_CallMethodDef CallEntries[] = {
-    {"_MDD_rcpparma_hello_world", (DL_FUNC) &_MDD_rcpparma_hello_world, 0},
-    {"_MDD_rcpparma_outerproduct", (DL_FUNC) &_MDD_rcpparma_outerproduct, 1},
-    {"_MDD_rcpparma_innerproduct", (DL_FUNC) &_MDD_rcpparma_innerproduct, 1},
-    {"_MDD_rcpparma_bothproducts", (DL_FUNC) &_MDD_rcpparma_bothproducts, 1},
+    {"_MDD_mdd_test_perm_c", (DL_FUNC) &_MDD_mdd_test_perm_c, 3},
+    {"_MDD_mdd_test_boot_c", (DL_FUNC) &_MDD_mdd_test_boot_c, 3},
     {NULL, NULL, 0}
 };
 
