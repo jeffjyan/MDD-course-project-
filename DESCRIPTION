@@ -5,8 +5,8 @@ Version: 0.0.0.9000
 Date: 2019-11-10
 Author: Jian (Jeff) Yan
 Maintainer: Jian (Jeff) Yan <jian@stat.tamu.edu>
-Description: Conditional mean independence tests based on martingale difference divergence and martingale difference correlation, where variables can be either vectored-valued or function-valued. 
-License: GPL-3
+Description: Conditional mean independence tests based on martingale difference divergence and martingale difference correlation, where variables can be either scaler or vector. 
+License: GPL-3  
 Imports: Rcpp (>= 1.0.2)
 LinkingTo: Rcpp, RcppArmadillo
 RoxygenNote: 7.0.0
